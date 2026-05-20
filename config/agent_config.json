@@ -1,0 +1,22 @@
+{
+  "agent_metadata": {
+    "agent_name": "FinOpsAIOperationsOrchestrator",
+    "version": "2026.1.0",
+    "target_environment": "Production-Cluster"
+  },
+  "observability_thresholds": {
+    "underutilization_cpu_percentage": 10.0,
+    "underutilization_memory_percentage": 15.0,
+    "consecutive_breach_minutes": 60
+  },
+  "governance_policies": {
+    "auto_approve_scale_down": true,
+    "restricted_zones": ["production-database-core"],
+    "max_monthly_savings_target_usd": 5000.0
+  },
+  "fallback_instance_matrix": {
+    "t3.xlarge": "t3.medium",
+    "c5.2xlarge": "c5.large",
+    "m5.large": "m5.large"
+  }
+}
